@@ -1,4 +1,4 @@
-package org.summer.demo;
+package javaee.mail;
 
 import java.util.Date;
 

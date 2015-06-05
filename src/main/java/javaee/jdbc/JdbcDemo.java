@@ -1,4 +1,4 @@
-package org.summer.demo;
+package javaee.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

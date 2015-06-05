@@ -1,4 +1,4 @@
-package org.summer.demo;
+package javaee.jms;
 
 import java.io.File;
 

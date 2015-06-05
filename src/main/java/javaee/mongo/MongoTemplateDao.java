@@ -1,4 +1,4 @@
-package org.summer.demo;
+package javaee.mongo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;

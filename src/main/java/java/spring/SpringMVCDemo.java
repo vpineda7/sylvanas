@@ -1,4 +1,4 @@
-package org.summer.demo;
+package java.spring;
 
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

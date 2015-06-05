@@ -1,4 +1,4 @@
-package org.summer.demo
+package groovy.demo
 
 class GroovyDemo {
 	
