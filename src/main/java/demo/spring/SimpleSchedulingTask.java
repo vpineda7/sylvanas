@@ -5,14 +5,12 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import org.springframework.mobile.device.Device;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
-import org.summer.user.bean.User;
 
 /**
  * Spring Projects Demo
@@ -50,35 +48,8 @@ public class SimpleSchedulingTask {
 		
 		User user = restTemplate.getForObject("http://localhost/summer/user/1", User.class);
 		
-		System.out.println(user.getId());
+		System.out.println(user);
 	}
-	
-	/**
-	 * Detecting a Device
-	 * 
-	 * <p>This demo walks you through the process of using Spring to detect the type of device that is accessing your web site.
-	 * 
-	 */
-	@RequestMapping("/detect-device")
-    public String detectDevice(Device device) {
-    	
-        String deviceType = "unknown";
-        
-        if (device.isNormal()) {
-        	
-            deviceType = "normal";
-            
-        } else if (device.isMobile()) {
-        	
-            deviceType = "mobile";
-            
-        } else if (device.isTablet()) {
-        	
-            deviceType = "tablet";
-        }
-        
-        return "Hello " + deviceType + " browser!";
-    }
 	
 	/**
 	 * Uploading Files
