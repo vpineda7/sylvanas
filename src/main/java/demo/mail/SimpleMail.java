@@ -1,4 +1,4 @@
-package javaee.mail;
+package demo.mail;
 
 import java.util.Date;
 
@@ -10,7 +10,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 
 //@Component
 //@Configuration
-public class JavaMailDemo {
+public class SimpleMail {
 	
 	@Autowired
 	private MailSender mailSender;

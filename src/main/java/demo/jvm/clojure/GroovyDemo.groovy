@@ -1,4 +1,4 @@
-package groovy.demo
+package demo.jvm.clojure
 
 class GroovyDemo {
 	

@@ -1,30 +1,26 @@
-package javaee.mongo;
+package demo.db.mongo;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.stereotype.Component;
 
-//@Component
-public class MongoTemplateDao {
+@Component
+public class MongoTemplate {
 	
+	@SuppressWarnings("unused")
 	private final MongoTemplate mongoTemplate;
 	
 	@Autowired
-    public MongoTemplateDao(MongoTemplate mongoTemplate) {
+    public MongoTemplate(MongoTemplate mongoTemplate) {
 		this.mongoTemplate = mongoTemplate;
     }
 	
-	public void test(){
-		
-		System.out.println(mongoTemplate.getDb());
-	}
-	
-	/*public void quickStart(){
+	/*public void quickStart() {
 		
 		//Make a Connection
 		@SuppressWarnings("resource")
 		MongoClient mongoClient = new MongoClient();
 		
-		*//**
+		//**
 		MongoClient mongoClient = new MongoClient( "localhost" );
 		
 		MongoClient mongoClient = new MongoClient( "localhost" , 27017 );
@@ -39,7 +35,6 @@ public class MongoTemplateDao {
 		MongoClientURI connectionString = new MongoClientURI("mongodb://localhost:27017,localhost:27018,localhost:27019");
 		MongoClient mongoClient = new MongoClient(connectionString);
 
-		*//*
 		
 		//Get A List of Databases 遍历所有数据库
 		for (String name: mongoClient.listDatabaseNames()) {
@@ -195,7 +190,5 @@ public class MongoTemplateDao {
 	        ),
 	    	new BulkWriteOptions().ordered(false)
 	 	);
-	 	
-        *//*
 	}*/
 }

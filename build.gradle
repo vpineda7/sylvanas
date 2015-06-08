@@ -28,12 +28,16 @@ dependencies {
 	compile fileTree(dir: './lib', include: ['*.jar'])
 	
 	compile 'org.springframework.boot:spring-boot-starter-web'
+	compile("org.springframework.boot:spring-boot-starter-data-mongodb")
 	
 	compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.13'
 	
 	compile 'log4j:log4j:1.2.17'
 	compile 'commons-dbcp:commons-dbcp:1.4'
+	
 	compile 'org.springframework:spring-jdbc'
+	compile("org.springframework:spring-jms")
+	
 	compile 'dom4j:dom4j:1.6.1'
 	
 	compile 'org.hibernate:hibernate-core:4.3.10.Final'

@@ -1,4 +1,4 @@
-package java.spring;
+package demo.spring;
 
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @version 1.0
  */
 //@Controller
-public class SpringMVCDemo {
+public class SimpleSpringMVC {
 	
 	@RequestMapping(value="/greeting")
     public String greeting(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {

@@ -1,4 +1,4 @@
-package java.spring;
+package demo.spring;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -22,7 +22,7 @@ import org.summer.user.bean.User;
  */
 //@Component
 //@Configuration
-public class SpringProjectsDemo {
+public class SimpleSchedulingTask {
 	
 	/**
 	 * Scheduling Tasks

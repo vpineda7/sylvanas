@@ -1,4 +1,4 @@
-package javaee.jms;
+package demo.jms;
 
 import java.io.File;
 
@@ -25,7 +25,7 @@ import org.springframework.util.FileSystemUtils;
  */
 //@Component
 //@Configuration
-public class JmsReceiverDemo {
+public class JmsTemplate {
 	
 	@Autowired
 	private JmsTemplate jmsTemplate;

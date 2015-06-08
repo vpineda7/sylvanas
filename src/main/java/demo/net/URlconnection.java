@@ -1,4 +1,4 @@
-package java.net;
+package demo.net;
 
 import java.net.URL;
 import java.nio.file.Files;
@@ -8,7 +8,7 @@ import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class URlconnectionDemo {
+public class URlconnection {
 	
 	public static void main(String[] args) throws Exception {
 		

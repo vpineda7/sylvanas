@@ -1,4 +1,4 @@
-package org.summer.demo;
+package demo.jms;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
@@ -23,7 +23,7 @@ import org.springframework.scheduling.annotation.Scheduled;
  */
 //@Component
 //@Configuration
-public class RabbitMqReceiverDemo {
+public class RabbitTemplate {
 
 	private CountDownLatch latch = new CountDownLatch(1);
 
@@ -68,12 +68,12 @@ public class RabbitMqReceiverDemo {
 	}
 	
 	@Bean
-	RabbitMqReceiverDemo receiver() {
-        return new RabbitMqReceiverDemo();
+	RabbitTemplate receiver() {
+        return new RabbitTemplate();
     }
 	
 	@Bean
-	MessageListenerAdapter listenerAdapter(RabbitMqReceiverDemo receiver) {
+	MessageListenerAdapter listenerAdapter(RabbitTemplate receiver) {
 		return new MessageListenerAdapter(receiver, "receiveMessage");
 	}
 	

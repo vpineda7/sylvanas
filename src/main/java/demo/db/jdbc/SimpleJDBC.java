@@ -1,4 +1,4 @@
-package javaee.jdbc;
+package demo.db.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class JdbcDemo {
+public class SimpleJDBC {
 	
 	private String url = "jdbc:MySQL://localhost:3306/mywms";
 	private String username = "root";
@@ -16,7 +16,7 @@ public class JdbcDemo {
 	private Statement stmt = null;
 	private ResultSet rs = null;
 	
-	public JdbcDemo(){
+	public SimpleJDBC(){
 		
 		try {
 			
