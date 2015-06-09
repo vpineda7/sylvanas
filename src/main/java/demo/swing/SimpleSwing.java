@@ -2,8 +2,6 @@ package demo.swing;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
 
 public class SimpleSwing extends JFrame {
 
@@ -16,40 +14,11 @@ public class SimpleSwing extends JFrame {
 		this.setSize(800, 600);
 		this.getContentPane().setLayout(null);
 		
-		this.add(getJLabel(), null);
-		this.add(getJTextField(), null);
-		this.add(getJButton(), null);
-		
 		this.setTitle("HelloWorld");
+		this.add(getJButton(), null);
 	}
 	
 	private JButton jButton;
-	
-	private JTextField jTextField;
-	
-	private JLabel jLabel;
-	
-	private JLabel getJLabel() {
-
-		if (jLabel == null) {
-
-			jLabel = new JLabel();
-			jLabel.setBounds(34, 49, 53, 18);
-			jLabel.setText("Name:");
-		}
-
-		return jLabel;
-	}
-
-	private JTextField getJTextField() {
-		
-		if (jTextField == null) {
-			jTextField = new JTextField();
-			jTextField.setBounds(96, 49, 160, 20);
-		}
-		
-		return jTextField;
-	}
 
 	private JButton getJButton() {
 		
