@@ -1,4 +1,4 @@
-package demo.mail;
+package demo;
 
 import java.util.Date;
 

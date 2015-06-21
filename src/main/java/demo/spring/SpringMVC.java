@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @version 1.0
  */
 //@Controller
-public class SimpleSpringMVC {
+public class SpringMVC {
 	
 	@RequestMapping(value="/greeting")
     public String greeting(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {

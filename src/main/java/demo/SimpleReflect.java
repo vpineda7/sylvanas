@@ -1,134 +1,100 @@
 package demo;
 
-import java.io.IOException;
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.FilterConfig;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * java 反射机制
- * 
- * 说白了就是java创建了一组可以动态的操作类的类
+ * Java反射示例
  * 
  */
-public class SimpleReflect implements Filter{
+public class SimpleReflect {
 	
-	private long id;
-	
-	private String name;
-	
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		
-		System.out.println(name);
-		
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	public static void main(String[] args) throws Exception {
 		
-		/**one*/
-		SimpleReflect reflect = new SimpleReflect();
+		/**
+		 * 使用ArrayList作为示例
+		 * 
+		 */
 		
-		System.out.println(reflect.getClass().getPackage().getName());
-		System.out.println(reflect.getClass().getName());
-		System.out.println(reflect.getClass().getPackage().getName());
+		//Get Class
+		Class<?> rclass = new ArrayList<>().getClass();
+		rclass = Class.forName("java.util.ArrayList");
+		rclass = java.util.ArrayList.class;
+
+		//Instance Class
+		List<?> list = new ArrayList<>();
+		list = (List<?>) rclass.newInstance();
 		
-		//two
-		Class<?> class1 = new SimpleReflect().getClass();
-		//使用ClassName获取Class
-		Class<?> class2 = Class.forName("demo.SimpleReflect");
-		Class<?> class3 = SimpleReflect.class;
+		//Get Package Name
+		System.out.println("Package : "+list.getClass().getPackage().getName());
 		
-		System.out.println(class1);
-		System.out.println(class2);
-		System.out.println(class3);
+		//Get Class Name
+		System.out.println("Class : "+list.getClass().getName());
 		
-		//three
-		//实例化Class
-		SimpleReflect reflect1 = (SimpleReflect)class1.newInstance();
-		System.out.println(reflect1);
+		//Get Field Name
+		Field[] field = rclass.getDeclaredFields();
 		
-		//four
-		Constructor<?>[] constructors = class1.getConstructors();
-		//使用构造函数创建对象
-		reflect1 = (SimpleReflect)constructors[0].newInstance();
-		
-		//five
-		Field field = class1.getDeclaredField("name");
-		
-		Object obj = class1.newInstance();
-		field.set(obj, "hello");
-		
-		System.out.println(field.get(obj));
-		
-		//six
-		System.out.println(class1.getSuperclass().getName());
-		
-		Field[] cl = class1.getDeclaredFields();
-		
-		for(Field one: cl){
+		System.out.println("-------------------- Get Field --------------------");
+		for(Field result : field){
 			
-			System.out.println(one);
+			System.out.println(result);
 		}
 		
-		Method[] method = class1.getDeclaredMethods();
+		//Get Method Name
+		Method[] method = rclass.getDeclaredMethods();
 		
-		for(Method one: method){
+		System.out.println("-------------------- Get Method --------------------");
+		for(Method result: method){
 			
-			System.out.println(one);
+			System.out.println(result);
 		}
 		
-		Class<?> interfaces[] = class1.getInterfaces();
+		//Get Constructor Name
+		Constructor<?>[] constructors = rclass.getConstructors();
 		
-		for(Class<?> one: interfaces){
+		System.out.println("-------------------- Get Constructor --------------------");
+		for(Constructor<?> result : constructors){
 			
-			System.out.println(one);
+			System.out.println(result);
+			
+			//Use Constructor Instance Class
+			if(result.getParameterCount() == 0){
+				
+				list = (List<?>) result.newInstance();
+			}
 		}
 		
-		//seven
-		Method method1 = class1.getMethod("getName");
-		//你不知道方法名 调用反转
-		method1.invoke(obj);
+		Class<?> interfaces[] = rclass.getInterfaces();
 		
-		//eight
-		System.out.println(class1.getClassLoader().getClass().getName());
-	}
-
-	@Override
-	public void init(FilterConfig filterConfig) throws ServletException {
-		// TODO Auto-generated method stub
+		System.out.println("-------------------- Get Interfaces --------------------");
+		for(Class<?> result: interfaces){
+			
+			System.out.println(result);
+		}
 		
-	}
-
-	@Override
-	public void doFilter(ServletRequest request, ServletResponse response,
-			FilterChain chain) throws IOException, ServletException {
-		// TODO Auto-generated method stub
+		System.out.println("-------------------- Get Superclass --------------------");
+		System.out.println("Superclass :"+rclass.getSuperclass().getName());
 		
-	}
-
-	@Override
-	public void destroy() {
-		// TODO Auto-generated method stub
+		Annotation[] annotation = rclass.getAnnotations();
 		
+		System.out.println("-------------------- Get Annotation --------------------");
+		for(Annotation result: annotation){
+			
+			System.out.println(result);
+		}
+		
+		System.out.println("-------------------- Set Field --------------------");
+		Field sizeField = rclass.getDeclaredField("size");
+		//sizeField.set(list, "10");
+		System.out.println(sizeField);
+		
+		System.out.println("-------------------- Call Method --------------------");
+		Method sizeMethod = rclass.getMethod("add", Object.class);
+		sizeMethod.invoke(list,"10");
+		System.out.println(list.get(0));
 	}
 }

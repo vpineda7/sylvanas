@@ -1,4 +1,4 @@
-package demo.db.mongo;
+package demo.spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

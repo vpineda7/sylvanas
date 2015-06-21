@@ -1,7 +1,6 @@
 package demo.spring;
 
 import org.springframework.stereotype.Component;
-import org.springframework.web.client.RestTemplate;
 
 /**
  * Spring Projects Demo
@@ -10,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
  * @version 1.0
  */
 @Component
-public class SimpleRestTemplate {
+public class RestTemplate {
 	
 	/**
 	 * Consuming a RESTful Web Service
@@ -20,10 +19,8 @@ public class SimpleRestTemplate {
 	 */
 	public void restTemplate() {
 		
-		RestTemplate restTemplate = new RestTemplate();
+		//RestTemplate restTemplate = new RestTemplate();
 		
-		User user = restTemplate.getForObject("http://localhost/summer/user/1", User.class);
-		
-		System.out.println(user);
+		//User user = restTemplate.getForObject("http://localhost/summer/user/1", User.class);
 	}
 }

@@ -9,7 +9,6 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
@@ -20,7 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
  */
 //@Component
 //@Configuration
-public class SimpleSchedulingTask {
+public class SchedulingTask {
 	
 	/**
 	 * Scheduling Tasks
@@ -35,21 +34,6 @@ public class SimpleSchedulingTask {
 		
         System.out.println("The time is now " + dateFormat.format(new Date()));
     }
-	
-	/**
-	 * Consuming a RESTful Web Service
-	 * 
-	 * <p>This demo walks you through the process of creating an application that consumes a RESTful web service.
-	 * 
-	 */
-	public void restTemplate() {
-		
-		RestTemplate restTemplate = new RestTemplate();
-		
-		User user = restTemplate.getForObject("http://localhost/summer/user/1", User.class);
-		
-		System.out.println(user);
-	}
 	
 	/**
 	 * Uploading Files

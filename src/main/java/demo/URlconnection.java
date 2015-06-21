@@ -1,4 +1,4 @@
-package demo.net;
+package demo;
 
 import java.net.URL;
 import java.nio.file.Files;
