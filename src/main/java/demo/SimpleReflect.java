@@ -62,10 +62,10 @@ public class SimpleReflect {
 			System.out.println(result);
 			
 			//Use Constructor Instance Class
-			if(result.getParameterCount() == 0){
+			/*if(result.getParameterCount() == 0){
 				
 				list = (List<?>) result.newInstance();
-			}
+			}*/
 		}
 		
 		Class<?> interfaces[] = rclass.getInterfaces();
