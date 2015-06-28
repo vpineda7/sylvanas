@@ -5,7 +5,7 @@ import java.io.ObjectInputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import demo.SimpleEnumeration;
+import org.phoenix.demo.SimpleEnumeration;
 
 public class Server {
 	

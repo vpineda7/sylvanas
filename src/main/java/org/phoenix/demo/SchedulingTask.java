@@ -1,4 +1,4 @@
-package demo.spring;
+package org.phoenix.demo;
 
 import java.io.BufferedOutputStream;
 import java.io.File;

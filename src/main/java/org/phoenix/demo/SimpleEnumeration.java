@@ -1,4 +1,4 @@
-package demo;
+package org.phoenix.demo;
 
 public enum SimpleEnumeration {
 	

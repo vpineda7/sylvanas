@@ -1,4 +1,4 @@
-package demo.spring;
+package org.phoenix.demo;
 
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

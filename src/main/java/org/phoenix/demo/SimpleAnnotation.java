@@ -1,4 +1,4 @@
-package demo;
+package org.phoenix.demo;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
