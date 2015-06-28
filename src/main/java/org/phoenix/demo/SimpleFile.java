@@ -1,4 +1,4 @@
-package demo.file;
+package org.phoenix.demo;
 
 import java.io.BufferedReader;
 import java.io.File;

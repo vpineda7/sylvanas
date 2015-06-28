@@ -1,4 +1,4 @@
-package demo.collection;
+package org.phoenix.demo;
 
 import java.util.Stack;
 import java.util.HashMap;
