@@ -1,4 +1,4 @@
-package demo.file;
+package org.phoenix.demo;
 
 public class SimpleXML {
 	
