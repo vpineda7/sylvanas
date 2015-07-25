@@ -27,28 +27,7 @@ repositories {
 
 dependencies {
 	
-	compile fileTree(dir: './lib', include: ['*.jar'])
-	
-	compile("org.springframework.boot:spring-boot-starter-web")
-	compile("org.springframework.boot:spring-boot-starter-data-mongodb")
-	compile("org.springframework.boot:spring-boot-starter-mail")
-	
-	compile('org.springframework.boot:spring-boot-starter-data-jpa')
-	compile('org.springframework.boot:spring-boot-starter-data-rest')
-	
 	compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.13'
-	
 	compile 'log4j:log4j:1.2.17'
-	compile 'commons-dbcp:commons-dbcp:1.4'
-	
-	compile 'org.springframework:spring-jdbc'
-	compile("org.springframework:spring-jms")
-	
 	compile 'dom4j:dom4j:1.6.1'
-	
-	runtime 'mysql:mysql-connector-java:5.1.32'
-	
-	//runtime 'org.springframework.data:spring-data-redis:1.4.0.RELEASE'
-	
-	//runtime 'redis.clients:jedis:2.5.1'
 }
