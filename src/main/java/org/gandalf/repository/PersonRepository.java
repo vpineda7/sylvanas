@@ -1,6 +1,6 @@
 package org.gandalf.repository;
 
-import org.gandalf.bean.Person;
+import org.gandalf.entity.Person;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 

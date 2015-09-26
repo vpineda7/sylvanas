@@ -1,8 +1,6 @@
 buildscript {
 	repositories {
-		
 		mavenCentral()
-		maven { url "https://repo.spring.io/libs-release" }
 	}
 	
 	dependencies {
@@ -24,7 +22,6 @@ jar {
 repositories {
 	
 	mavenCentral()
-	maven { url "https://repo.spring.io/libs-release" }
 }
 
 sourceCompatibility = 1.8
@@ -33,10 +30,10 @@ targetCompatibility = 1.8
 dependencies {
 	
 	compile("org.springframework.boot:spring-boot-starter-data-rest")
-	compile("org.springframework.boot:spring-boot-starter-mail")
+	//compile("org.springframework.boot:spring-boot-starter-mail")
 	compile("org.springframework.data:spring-data-neo4j")
 	
-	compile("org.hibernate:hibernate-validator")
+	//compile("org.hibernate:hibernate-validator")
 }
 
 task wrapper(type: Wrapper) {
