@@ -1,5 +1,7 @@
 buildscript {
 	repositories {
+	
+		maven{ url 'http://maven.oschina.net/content/groups/public/'}
 		mavenCentral()
 	}
 	
@@ -20,7 +22,8 @@ jar {
 [ compileJava, compileTestJava ]*.options*.encoding = 'UTF-8'
 
 repositories {
-	
+
+	maven{ url 'http://maven.oschina.net/content/groups/public/'}
 	mavenCentral()
 }
 
