@@ -21,4 +21,5 @@ public class RestTemplate {
 		
 		//User user = restTemplate.getForObject("http://localhost/summer/user/1", User.class);
 	}
+	
 }

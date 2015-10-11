@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class Main implements Runnable {
+public class Main1 implements Runnable {
 	
 	private String line;
 	
@@ -16,7 +16,7 @@ public class Main implements Runnable {
 	
 	public static Map<Integer,String> result = Collections.synchronizedMap(new HashMap<Integer, String>());
 	
-	public Main(String line, int index){
+	public Main1(String line, int index){
 		
 		this.line = line;
 		this.index = index;
@@ -58,7 +58,7 @@ public class Main implements Runnable {
 
 		while ((line = s.readLine()) != null) {
 			
-			Thread t = new Thread(new Main(line, index++));
+			Thread t = new Thread(new Main1(line, index++));
 			t.start();
 		}
 		
