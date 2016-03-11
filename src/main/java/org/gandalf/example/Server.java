@@ -1,4 +1,4 @@
-package org.gandalf.demo;
+package org.gandalf.example;
 
 import java.io.InputStream;
 import java.io.ObjectInputStream;

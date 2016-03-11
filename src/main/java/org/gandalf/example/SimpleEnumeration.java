@@ -1,4 +1,4 @@
-package org.gandalf.demo;
+package org.gandalf.example;
 
 public enum SimpleEnumeration {
 	

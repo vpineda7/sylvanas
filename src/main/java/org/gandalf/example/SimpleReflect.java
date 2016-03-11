@@ -1,4 +1,4 @@
-package org.gandalf.demo;
+package org.gandalf.example;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;

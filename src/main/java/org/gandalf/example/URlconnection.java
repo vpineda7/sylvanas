@@ -1,4 +1,4 @@
-package org.gandalf.demo;
+package org.gandalf.example;
 
 import java.net.URL;
 import java.nio.file.Files;

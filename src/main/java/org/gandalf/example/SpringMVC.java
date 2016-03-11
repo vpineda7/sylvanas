@@ -1,4 +1,4 @@
-package org.gandalf.demo;
+package org.gandalf.example;
 
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
