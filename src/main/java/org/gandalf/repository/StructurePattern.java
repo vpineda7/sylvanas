@@ -41,6 +41,7 @@ public class StructurePattern {
 	/**
 	 * 桥接模式
 	 * 
+	 * 跨平台多格式播放器
 	 */
 	
 	/**
@@ -51,6 +52,7 @@ public class StructurePattern {
 	/**
 	 * 装饰器模式
 	 * 
+	 * 变形金刚
 	 */
 	
 	/**

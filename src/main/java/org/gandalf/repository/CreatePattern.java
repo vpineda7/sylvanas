@@ -1,5 +1,10 @@
 package org.gandalf.repository;
 
+/**
+ * 设计模式
+ * 
+ * 设计模式如同太极拳，只重其意不重其招。
+ */
 public class CreatePattern {
 	
 	/**
@@ -43,7 +48,7 @@ public class CreatePattern {
 	/**
 	 * 建造者模式
 	 * 
-	 * 
+	 * KFC套餐
 	 */
 	class BuilderPattern{
 		
@@ -52,9 +57,9 @@ public class CreatePattern {
 	/**
 	 * 原型模式
 	 * 
-	 * 
 	 */
 	class PrototypePattern{
+		
 		
 	}
 }
