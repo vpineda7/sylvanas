@@ -1,4 +1,4 @@
-package org.gandalf.repository;
+package org.gandalf.reference;
 
 /**
  * 设计模式

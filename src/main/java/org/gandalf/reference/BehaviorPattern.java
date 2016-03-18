@@ -1,4 +1,4 @@
-package org.gandalf.repository;
+package org.gandalf.reference;
 
 public class BehaviorPattern {
 	
