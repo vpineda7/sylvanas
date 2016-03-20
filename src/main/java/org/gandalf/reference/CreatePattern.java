@@ -29,6 +29,7 @@ public class CreatePattern {
 	 * 单例模式
 	 * 
 	 * 电话号码，邮箱
+	 * 保证一个类只有一个实例并且这个实例易于被访问
 	 */
 	static class SingletonPattern{
 		
