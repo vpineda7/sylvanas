@@ -38,6 +38,8 @@ dependencies {
 	compile('org.apache.lucene:lucene-core:5.5.0')
 	compile('org.apache.lucene:lucene-queryparser:5.5.0')
 	compile('org.apache.lucene:lucene-analyzers-common:5.5.0')
+	
+	compile('org.apache.activemq:activemq-core:5.7.0' )
 }
 
 task wrapper(type: Wrapper) {
