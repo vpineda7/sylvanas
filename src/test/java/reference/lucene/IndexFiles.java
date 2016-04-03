@@ -1,4 +1,4 @@
-package org.gandalf.reference.apache;
+package reference.lucene;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -26,7 +26,7 @@ import org.apache.lucene.index.IndexWriterConfig.OpenMode;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 
-public class LuceneIndexFiles {
+public class IndexFiles {
 	
 	public static void main(String[] args) throws Exception {
 		

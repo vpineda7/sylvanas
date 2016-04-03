@@ -1,4 +1,4 @@
-package org.gandalf.example;
+package example;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;

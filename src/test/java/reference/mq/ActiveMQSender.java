@@ -1,4 +1,4 @@
-package org.gandalf.reference.apache;
+package reference.mq;
 
 import javax.jms.Connection;
 import javax.jms.ConnectionFactory;

@@ -1,4 +1,4 @@
-package org.gandalf.example;
+package example;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
