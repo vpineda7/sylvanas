@@ -1,13 +1,30 @@
-import urllib.request
+# simple spider baidu logo image
 
-data = {}
-data['word'] = 'Jecvay Notes'
+import urllib
+import re
 
-url_values = urllib.parse.urlencode(data)
-url = "http://www.baidu.com/s?"
-full_url = url + url_values
+def getHtml(url):
 
+    page = urllib.urlopen(url)
+    return page.read()
 
-data=urllib.request.urlopen(full_url).read()
-data=data.decode('UTF-8')
-print(data)
+def getElement(html):
+
+    reg = re.compile(r'src="(.+?\.png)"')
+
+    return re.findall(reg,html)
+
+def save(elements):
+
+    x = 0
+    for element in elements:
+        urllib.urlretrieve("http:"+element, '%s.png' %x)
+        x+=1
+
+html = getHtml("http://www.baidu.com")
+
+elements = getElement(html)
+
+print elements
+
+save(elements)
