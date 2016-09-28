@@ -1,5 +1,5 @@
-#!/usr/bin/env python
-# coding=utf-8
+#!/usr/bin/python
+#coding=utf-8
 
 from asyncore import dispatcher
 from asynchat import async_chat

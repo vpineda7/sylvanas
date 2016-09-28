@@ -1,3 +1,6 @@
+#!/usr/bin/python
+#coding=utf-8
+
 # simple spider baidu logo image
 
 import urllib

@@ -1,3 +1,6 @@
+#!/usr/bin/python
+#coding=utf-8
+
 # 模块说明
 
 # 操作系统接口
