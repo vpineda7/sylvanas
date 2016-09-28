@@ -157,6 +157,7 @@ class ChatServer(dispatcher):
 
         self.name=name
         self.users={}
+
         self.main_room=ChatRoom(self)
 
     def handle_accept(self):
