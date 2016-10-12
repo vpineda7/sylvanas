@@ -7,6 +7,7 @@ from pymongo import MongoClient
 
 # 获取文档
 def getDocument(url):
+
     #post
     #param = urllib.urlencode({"username":"1016903103@qq.com","password":"XXXX"})
     #request = urllib.request(url, param)
@@ -22,8 +23,14 @@ def getDocument(url):
 
 # 检索指定内容
 def getElement(document):
-    # 正则表达式
-    print document
+
+    #选择器 xpath css 正则表达式
+    return {
+        "name":"hello"
+    }
+
+def getJSON(url):
+    print url
 
 # 存储
 def save(collection):
@@ -35,6 +42,8 @@ def main():
     doc=getDocument(url)
     ele=getElement(doc)
     save(ele)
+
+    #getJSON('http://www.lagou.com/gongsi/2-0-0.json')
 
 if __name__ == "__main__":
     main()
