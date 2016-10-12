@@ -5,6 +5,7 @@
 * hospital
 * school
 * company
+* bank
 
 ### config .pyc
 
