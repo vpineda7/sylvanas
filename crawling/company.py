@@ -3,6 +3,7 @@
 
 import urllib
 import re
+from pyquery import PyQuery
 from pymongo import MongoClient
 
 # 获取文档
@@ -19,10 +20,13 @@ def getDocument(url):
     #headers = {'User-Agent' : 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'}
     response = urllib.urlopen(url)
 
-    return response.read()
+    return PyQuery(response.read())
 
 # 检索指定内容
 def getElement(document):
+
+    #print document('#lg_header')
+    #print document('a').find('h1').text()
 
     #选择器 xpath css 正则表达式
     return {
