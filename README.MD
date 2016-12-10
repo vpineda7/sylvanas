@@ -18,6 +18,10 @@
 	$ cd src
 	$ source ~/.profile
 
+### Web
+
+	$ python -m SimpleHTTPServer 9000
+
 ### Appendix
 
 > 人过大佛寺, 寺佛大过人.
