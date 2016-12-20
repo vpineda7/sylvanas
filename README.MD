@@ -1,5 +1,20 @@
 # Aragorn
 
+### Installation
+
+```
+$ pip install Scrapy
+```
+
+### Configuration
+
+remove the `.pyc` file
+
+```
+$ vi ~/.profile -> export PYTHONDONTWRITEBYTECODE=x
+$ cd src
+$ source ~/.profile
+```
 ### Start MongoDB
 
 	$ mongod --dbpath /Users/subin/Library/MongoDB
@@ -11,12 +26,6 @@
 * school
 * company
 * bank
-
-### config .pyc
-
-	$ vi ~/.profile -> export PYTHONDONTWRITEBYTECODE=x
-	$ cd src
-	$ source ~/.profile
 
 ### Web
 
