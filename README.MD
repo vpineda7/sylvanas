@@ -2,34 +2,37 @@
 
 ### Installation
 
+- Python 2.7
+
+### Requirements
+
 ```
 $ pip install Scrapy
+$ mongod --dbpath /Users/subin/Library/MongoDB
+$ mongoimport --db test --collection restaurants --drop --file ~/downloads/primer-dataset.json
 ```
 
 ### Configuration
 
-remove the `.pyc` file
+remove the file `.pyc`
 
 ```
 $ vi ~/.profile -> export PYTHONDONTWRITEBYTECODE=x
 $ cd src
 $ source ~/.profile
 ```
-### Start MongoDB
 
-	$ mongod --dbpath /Users/subin/Library/MongoDB
-	$ mongoimport --db test --collection restaurants --drop --file ~/downloads/primer-dataset.json
+### Debug And Run
 
-### crawling
+```
+$ scrapy crawl quotes
+```
 
-* hospital
-* school
-* company
-* bank
+### HTTP Server
 
-### Web
-
-	$ python -m SimpleHTTPServer 9000
+```
+$ python -m SimpleHTTPServer 9000
+```
 
 ### Appendix
 
