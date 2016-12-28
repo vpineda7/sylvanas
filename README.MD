@@ -25,7 +25,8 @@ $ source ~/.profile
 ### Debug And Run
 
 ```
-$ scrapy crawl quotes
+$ scrapy crawl quotes -o quotes.json
+$ scrapy crawl school
 ```
 
 ### HTTP Server
