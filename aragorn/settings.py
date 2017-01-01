@@ -14,6 +14,9 @@ BOT_NAME = 'aragorn'
 SPIDER_MODULES = ['aragorn.spiders']
 NEWSPIDER_MODULE = 'aragorn.spiders'
 
+#mongodb://localhost:27017/
+MONGO_URI = "localhost"
+MONGO_DATABASE = "test"
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'aragorn (+http://www.yourdomain.com)'
 
@@ -62,9 +65,9 @@ ROBOTSTXT_OBEY = True
 #}
 
 # Configure item pipelines
-# See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'aragorn.pipelines.AragornPipeline': 300
+    #'aragorn.pipelines.JsonWriterPipeline': 300
+    'aragorn.pipelines.MongoPipeline': 400
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

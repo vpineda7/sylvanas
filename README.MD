@@ -1,4 +1,4 @@
-# Aragorn
+# Sylvanas
 
 ### Installation
 
@@ -25,7 +25,6 @@ $ source ~/.profile
 ### Debug And Run
 
 ```
-$ scrapy crawl quotes -o quotes.json
 $ scrapy crawl school
 ```
 
