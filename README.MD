@@ -2,14 +2,14 @@
 
 ### Installation
 
-- Python 2.7
+- Python
+- Scrapy
+- MongoDB
 
 ### Requirements
 
 ```
-$ pip install Scrapy
 $ mongod --dbpath /Users/subin/Library/MongoDB
-$ mongoimport --db test --collection restaurants --drop --file ~/downloads/primer-dataset.json
 ```
 
 ### Configuration
@@ -22,10 +22,33 @@ $ cd src
 $ source ~/.profile
 ```
 
-### Debug And Run
+settings.py `json` or `mongodb`(use spider.name as file or collections name) 
 
 ```
-$ scrapy crawl school
+ITEM_PIPELINES = {
+    'aragorn.pipelines.JsonWriterPipeline': 300,
+    'aragorn.pipelines.MongoPipeline': 400
+}
+```
+
+settings.py `mongodb`
+
+```
+MONGO_URI = "localhost"
+MONGO_DATABASE = "test"
+```
+
+### Run Spider
+
+```
+$ scrapy crawl spider_name
+```
+
+### Testing
+
+```
+$ scrapy shell 'url'
+$ response.css('div.sk')
 ```
 
 ### HTTP Server

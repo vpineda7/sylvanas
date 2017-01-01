@@ -66,8 +66,8 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 ITEM_PIPELINES = {
-    #'aragorn.pipelines.JsonWriterPipeline': 300
-    'aragorn.pipelines.MongoPipeline': 400
+    'aragorn.pipelines.JsonWriterPipeline': 300
+    #'aragorn.pipelines.MongoPipeline': 400
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

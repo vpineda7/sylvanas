@@ -6,14 +6,15 @@ class SchoolSpider(scrapy.Spider):
     # 默认使用名字作为存储依据
     name = "school"
     
+    # TODO: 等待页面加载完成
     def start_requests(self):
-        url = 'http://www.ruyile.com/xxlb.aspx?p='
-        #p=1-15280
+        url = 'http://gkcx.eol.cn/soudaxue/queryschool.html?page='
+        #p=1-276
         for num in range(1,2):
             yield scrapy.Request(url=url+str(num), callback=self.parse)
     
     def parse(self, response):
-        for one in response.css('div.sk'):
+        for one in response.css('tr.getJsXmlTr'):
             yield {
-                'name': one.css('a::text').extract_first()
+                'name': one.css('td:nth-child(1) a::attr(title)').extract_first()
             }
