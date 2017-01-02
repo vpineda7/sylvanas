@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
+#from aragorn.items import SchoolItem
 
 class SchoolSpider(scrapy.Spider):
     
@@ -16,6 +17,7 @@ class SchoolSpider(scrapy.Spider):
     
     def parse(self, response):
         for one in response.css('tr.getJsXmlTr'):
+            
             yield {
                 'name': one.css('td:nth-child(1) a::attr(title)').extract_first()
             }

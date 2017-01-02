@@ -7,7 +7,9 @@
 
 import scrapy
 
-class AragornItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class SchoolItem(scrapy.Item):
+    # 校名
+    name = scrapy.Field()
+    # 所在地
+    location = scrapy.Field()
+    # 小学，中学，大学

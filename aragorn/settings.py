@@ -14,7 +14,7 @@ BOT_NAME = 'aragorn'
 SPIDER_MODULES = ['aragorn.spiders']
 NEWSPIDER_MODULE = 'aragorn.spiders'
 
-#mongodb://localhost:27017/
+# mongodb://localhost:27017/
 MONGO_URI = "localhost"
 MONGO_DATABASE = "test"
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
