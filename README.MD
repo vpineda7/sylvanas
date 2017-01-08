@@ -4,6 +4,7 @@
 
 - Python
 - Scrapy
+- Selenium
 - MongoDB
 
 ### Requirements

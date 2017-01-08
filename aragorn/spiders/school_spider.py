@@ -7,8 +7,8 @@ class SchoolSpider(scrapy.Spider):
     # 默认使用名字作为存储依据
     name = "school"
     
-    # TODO: 等待页面加载完成
-    # TODO: 安全认证
+    # TODO 等待页面加载完成
+    # TODO 安全认证
     def start_requests(self):
         url = 'http://gkcx.eol.cn/soudaxue/queryschool.html?page='
         #p=1-276
