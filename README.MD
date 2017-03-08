@@ -1,26 +1,22 @@
 # Sylvanas
 
-### Installation
+### Requirements
 
 - Python
 - Scrapy
 - Selenium
 - MongoDB
 
-### Requirements
-
-```
-$ mongod --dbpath /Users/subin/Library/MongoDB
-```
+### Installation
 
 ### Configuration
 
 remove the file `.pyc`
 
-```
-$ vi ~/.profile -> export PYTHONDONTWRITEBYTECODE=x
-$ cd src
-$ source ~/.profile
+```bash
+vi ~/.profile -> export PYTHONDONTWRITEBYTECODE=x
+cd src
+source ~/.profile
 ```
 
 settings.py `json` or `mongodb`(use spider.name as file or collections name) 
@@ -39,26 +35,19 @@ MONGO_URI = "localhost"
 MONGO_DATABASE = "test"
 ```
 
-### Run Spider
+### Run
 
 ```
-$ scrapy crawl spider_name
+mongod --dbpath /Users/subin/Library/MongoDB
+
+scrapy crawl spider_name
 ```
 
 ### Testing
 
 ```
-$ scrapy shell 'url'
-$ response.css('div.sk')
-```
-
-### HTTP Server
-
-```
-$ python -m SimpleHTTPServer 9000
+scrapy shell 'url'
+response.css('div.sk')
 ```
 
 ### Appendix
-
-> 人过大佛寺, 寺佛大过人.  
-> 客上天然居, 居然天上客.  
