@@ -5,6 +5,7 @@
 - Python
 - Scrapy
 - Selenium
+- PhantomJS
 - MongoDB
 
 ### Installation
@@ -37,10 +38,12 @@ MONGO_DATABASE = "test"
 
 ### Run
 
-```
+```shell
 mongod --dbpath /Users/subin/Library/MongoDB
 
-scrapy crawl spider_name
+# scrapy <command> [options] [args]
+scrapy list
+scrapy crawl [spider_name]
 ```
 
 ### Testing

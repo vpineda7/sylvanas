@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-
+'''
+# 模块说明
+'''
 # Define here the models for your scraped items
 #
 # See documentation in:
@@ -9,7 +11,7 @@ import scrapy
 
 # 学校
 class SchoolItem(scrapy.Item):
-    
+
     # 校名
     name = scrapy.Field()
     # 所在地
@@ -17,7 +19,7 @@ class SchoolItem(scrapy.Item):
 
 # 人物
 class HumanItem(scrapy.Item):
-    
+
     # 姓名
     name = scrapy.Field()
     # 性别
