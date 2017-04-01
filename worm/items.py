@@ -7,9 +7,18 @@
 
 import scrapy
 
+# 学校
 class SchoolItem(scrapy.Item):
+    
     # 校名
     name = scrapy.Field()
     # 所在地
     location = scrapy.Field()
-    # 小学，中学，大学
+
+# 人物
+class HumanItem(scrapy.Item):
+    
+    # 姓名
+    name = scrapy.Field()
+    # 性别
+    sex = scrapy.Field()
