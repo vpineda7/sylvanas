@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for aragorn project
+# Scrapy settings for Worm project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,16 +9,16 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'aragorn'
+BOT_NAME = 'worm'
 
-SPIDER_MODULES = ['aragorn.spiders']
-NEWSPIDER_MODULE = 'aragorn.spiders'
+SPIDER_MODULES = ['worm.spiders']
+NEWSPIDER_MODULE = 'worm.spiders'
 
 # mongodb://localhost:27017/
 MONGO_URI = "localhost"
 MONGO_DATABASE = "test"
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'aragorn (+http://www.yourdomain.com)'
+#USER_AGENT = 'worm (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -49,13 +49,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'aragorn.middlewares.AragornSpiderMiddleware': 543,
+#    'worm.middlewares.WormSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'aragorn.middlewares.MyCustomDownloaderMiddleware': 543,
+#    'worm.middlewares.MyCustomDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -66,8 +66,8 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 ITEM_PIPELINES = {
-    'aragorn.pipelines.JsonWriterPipeline': 300
-    #'aragorn.pipelines.MongoPipeline': 400
+    'worm.pipelines.JsonWriterPipeline': 300
+    #'worm.pipelines.MongoPipeline': 400
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

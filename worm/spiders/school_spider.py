@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
-#from aragorn.items import SchoolItem
+#from worm.items import SchoolItem
 
 class SchoolSpider(scrapy.Spider):
     

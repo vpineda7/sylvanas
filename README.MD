@@ -23,8 +23,8 @@ settings.py `json` or `mongodb`(use spider.name as file or collections name)
 
 ```
 ITEM_PIPELINES = {
-    'aragorn.pipelines.JsonWriterPipeline': 300,
-    'aragorn.pipelines.MongoPipeline': 400
+    'worm.pipelines.JsonWriterPipeline': 300,
+    'worm.pipelines.MongoPipeline': 400
 }
 ```
 
