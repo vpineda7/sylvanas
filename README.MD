@@ -54,3 +54,8 @@ response.css('div.sk')
 ```
 
 ### Appendix
+
+### TODO
+
+- 调整输出的日志
+- 解决下载失败后阻塞的问题

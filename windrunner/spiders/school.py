@@ -15,7 +15,10 @@ class SchoolSpider(scrapy.Spider):
 
         url = 'http://gkcx.eol.cn/soudaxue/queryschool.html?page='
         #p=1-277
-        for num in range(1, 277):
+        # p=76 下载失败
+        # p=88 下载失败
+        # p=94 下载失败
+        for num in range(94, 277):
             yield scrapy.Request(url=url+str(num), callback=self.parse)
 
     def parse(self, response):
