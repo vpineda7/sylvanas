@@ -16,6 +16,10 @@ class SchoolItem(scrapy.Item):
     name = scrapy.Field()
     # 所在地
     location = scrapy.Field()
+    # 层次
+    level = scrapy.Field()
+    # 类别
+    classify = scrapy.Field()
 
 # 人物
 class HumanItem(scrapy.Item):

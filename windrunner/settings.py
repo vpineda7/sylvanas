@@ -3,17 +3,17 @@
 # 模块说明
 '''
 
-BOT_NAME = 'worm'
+BOT_NAME = 'windrunner'
 
-SPIDER_MODULES = ['worm.spiders']
-NEWSPIDER_MODULE = 'worm.spiders'
+SPIDER_MODULES = ['windrunner.spiders']
+NEWSPIDER_MODULE = 'windrunner.spiders'
 
 # mongodb://localhost:27017/
 MONGO_URI = "localhost"
-MONGO_DATABASE = "test"
+MONGO_DATABASE = "sylvanas"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'worm (+http://www.yourdomain.com)'
+#USER_AGENT = 'windrunner (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
@@ -42,12 +42,12 @@ ROBOTSTXT_OBEY = False
 
 # Enable or disable spider middlewares
 #SPIDER_MIDDLEWARES = {
-#    'worm.middlewares.WormSpiderMiddleware': 543,
+#    'windrunner.middlewares.WindrunnerSpiderMiddleware': 543,
 #}
 
 # 下载器中间件
 DOWNLOADER_MIDDLEWARES = {
-    'worm.middlewares.DynamicDownloaderMiddleware': 543
+    'windrunner.middlewares.DynamicDownloaderMiddleware': 543
 }
 
 # Enable or disable extensions
@@ -57,8 +57,8 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 ITEM_PIPELINES = {
-    'worm.pipelines.JsonWriterPipeline': 300,
-    # 'worm.pipelines.MongoPipeline': 400
+    #'windrunner.pipelines.JsonWriterPipeline': 300,
+    'windrunner.pipelines.MongoPipeline': 400
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
