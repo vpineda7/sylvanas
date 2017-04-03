@@ -44,6 +44,7 @@ mongod --dbpath /Users/subin/Library/MongoDB
 # scrapy <command> [options] [args]
 scrapy list
 scrapy crawl [spider_name]
+find . -name *.pyc -exec rm -rf {} \;
 ```
 
 ### Testing
@@ -59,3 +60,4 @@ response.css('div.sk')
 
 - 调整输出的日志
 - 解决下载失败后阻塞的问题
+- 禁止.pyc文件生成

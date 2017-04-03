@@ -5,20 +5,17 @@ import scrapy
 
 class SchoolSpider(scrapy.Spider):
 
-    ''' 中国教育在线 所有学校 '''
-
-    # 使用名字进行爬取，默认使用名字作为存储依据
+    # 爬虫名和mongodb集合名
     name = "school"
+    # 使用浏览器加载
+    resources = "xhr"
 
-    # 安全认证
     def start_requests(self):
 
+        # 中国教育在线
         url = 'http://gkcx.eol.cn/soudaxue/queryschool.html?page='
-        #p=1-277
-        # p=76 下载失败
-        # p=88 下载失败
-        # p=94 下载失败
-        for num in range(94, 277):
+        # p=76 下载失败 p=88 下载失败 p=94 下载失败 下载完成
+        for num in range(1, 278):
             yield scrapy.Request(url=url+str(num), callback=self.parse)
 
     def parse(self, response):

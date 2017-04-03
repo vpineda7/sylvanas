@@ -57,7 +57,7 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 ITEM_PIPELINES = {
-    #'windrunner.pipelines.JsonWriterPipeline': 300,
+    # 'windrunner.pipelines.JsonWriterPipeline': 300,
     'windrunner.pipelines.MongoPipeline': 400
 }
 
