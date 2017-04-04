@@ -1,7 +1,4 @@
 # -*- coding: utf-8 -*-
-'''
-# 模块说明
-'''
 
 BOT_NAME = 'windrunner'
 
@@ -55,7 +52,7 @@ DOWNLOADER_MIDDLEWARES = {
 #    'scrapy.extensions.telnet.TelnetConsole': None,
 #}
 
-# Configure item pipelines
+# 存储管道
 ITEM_PIPELINES = {
     # 'windrunner.pipelines.JsonWriterPipeline': 300,
     'windrunner.pipelines.MongoPipeline': 400
