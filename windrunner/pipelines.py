@@ -4,6 +4,8 @@ import json
 import codecs
 import pymongo
 
+from neo4j.v1 import GraphDatabase, basic_auth
+
 # JSON FIle
 class JsonWriterPipeline(object):
 
@@ -17,6 +19,22 @@ class JsonWriterPipeline(object):
     def process_item(self, item, spider):
         line = json.dumps(dict(item)) + '\n'
         self.file.write(line.decode("unicode_escape"))
+        return item
+
+# Neo4j
+class Neo4jPipline(object):
+
+    def __init__(self):
+        self.driver = GraphDatabase.driver("bolt://localhost:7687", auth=basic_auth("neo4j", "neo4j"))
+
+    def open_spider(self, spider):
+        self.session = self.driver.session()
+
+    def close_spider(self, spider):
+        self.session.close()
+
+    def process_item(self, item, spider):
+        # self.session.run("CREATE (a:Person {name: {name}, title: {title}})",{"name": "Arthur", "title": "King"})
         return item
 
 # MongoDB

@@ -7,9 +7,19 @@
 - Selenium
 - PhantomJS
 - MongoDB
+- Neo4j
 
 ### Installation
 
+```
+brew install phantomjs
+
+pip install scrapy
+pip install -U selenium
+
+python -m pip install pymongo
+pip install neo4j-driver
+```
 ### Configuration
 
 remove the file `.pyc`
@@ -62,3 +72,4 @@ response.css('div.sk')
 - 解决下载失败后阻塞的问题
 - 禁止.pyc文件生成
 - 开发与生产环境
+- Neo4j
