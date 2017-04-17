@@ -1,18 +1,19 @@
 # -*- coding: utf-8 -*-
-
+'''
+中国教育在线
+'''
 import scrapy
 #from windrunner.items import SchoolItem
 
 class SchoolSpider(scrapy.Spider):
-
-    # 爬虫名和mongodb集合名
+    '''
+    name: 爬虫名和mongodb集合名
+    resources: 是否使用浏览器加载(doc, xhr)
+    '''
     name = "school"
-    # 使用浏览器加载
     resources = "xhr"
 
     def start_requests(self):
-
-        # 中国教育在线
         url = 'http://gkcx.eol.cn/soudaxue/queryschool.html?page='
         # p=76 下载失败 p=88 下载失败 p=94 下载失败 下载完成
         for num in range(1, 278):

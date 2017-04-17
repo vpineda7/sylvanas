@@ -1,17 +1,19 @@
 # -*- coding: utf-8 -*-
-
+'''
+北京市预约挂号统一平台
+'''
 import scrapy
 #from windrunner.items import SchoolItem
 
 class HospitalSpider(scrapy.Spider):
-
-    # 爬虫名和mongodb集合名
+    '''
+    name: 爬虫名和mongodb集合名
+    resources: 是否使用浏览器加载(doc, xhr)
+    '''
     name = "hospital"
-    # 不使用浏览器加载
     resources = "doc"
 
     def start_requests(self):
-        # 北京市预约挂号统一平台
         urll = 'http://www.bjguahao.gov.cn/hp/'
         urlr = ',0,0,0.htm'
         # p = 16
@@ -27,4 +29,4 @@ class HospitalSpider(scrapy.Spider):
                 'telephone':one.xpath('string(dl/dd/div/p[2])').extract_first(),
                 'address':one.xpath('string(dl/dd/div/p[3])').extract_first()
             }
-    
+            

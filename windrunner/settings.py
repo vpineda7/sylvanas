@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+'''
+配置文件
+'''
 
 BOT_NAME = 'windrunner'
 

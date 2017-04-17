@@ -1,29 +1,33 @@
 # -*- coding: utf-8 -*-
-
-import json  
+'''
+存储方式
+'''
+import json
 import codecs
 import pymongo
 
 from neo4j.v1 import GraphDatabase, basic_auth
 
-# JSON FIle
 class JsonWriterPipeline(object):
-
+    '''
+    JSON FIle
+    '''
     def open_spider(self, spider):
         # 使用spider.name 作为Json文件名
         self.file = codecs.open(spider.name + '.json', 'w', encoding='utf-8')
-        
+
     def close_spider(self, spider):
         self.file.close()
-        
+
     def process_item(self, item, spider):
         line = json.dumps(dict(item)) + '\n'
         self.file.write(line.decode("unicode_escape"))
         return item
 
-# Neo4j
 class Neo4jPipline(object):
-
+    '''
+    Neo4j
+    '''
     def __init__(self):
         self.driver = GraphDatabase.driver("bolt://localhost:7687", auth=basic_auth("neo4j", "neo4j"))
 
@@ -37,9 +41,10 @@ class Neo4jPipline(object):
         # self.session.run("CREATE (a:Person {name: {name}, title: {title}})",{"name": "Arthur", "title": "King"})
         return item
 
-# MongoDB
 class MongoPipeline(object):
-
+    '''
+    MongoDB
+    '''
     def __init__(self, mongo_uri, mongo_db):
         self.mongo_uri = mongo_uri
         self.mongo_db = mongo_db

@@ -1,10 +1,14 @@
 # -*- coding: utf-8 -*-
-
+'''
+中间件
+'''
 from selenium import webdriver
 from scrapy.http import HtmlResponse
 
 class DynamicDownloaderMiddleware(object):
-
+    '''
+    使用浏览器内核加载完整页面
+    '''
     def process_request(self, request, spider):
 
         if spider.resources == "xhr":
