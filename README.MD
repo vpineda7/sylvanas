@@ -64,7 +64,18 @@ scrapy shell 'url'
 response.css('div.sk')
 ```
 
-### Appendix
+### MapReduce
+
+```
+ export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
+ export PATH=${JAVA_HOME}/bin:${PATH}
+ export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar
+
+ hadoop com.sun.tools.javac.Main WordCount.java
+ jar cf wc.jar WordCount*.class
+
+ hadoop jar wc.jar WordCount ./input ./output
+```
 
 ### TODO
 
