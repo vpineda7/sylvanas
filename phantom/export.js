@@ -1,6 +1,6 @@
 // 将网页导出成图片
 // 例如: phantomjs export.js http://www.baidu.com
-
+"use strict";
 var page = require('webpage').create();
 var system = require('system');
 
