@@ -6,11 +6,12 @@ var host, port;
 
 // 端口号
 if (system.args.length !== 2) {
-  console.log('Usage: phantomjs server.js <port>');
+  console.log('使用方式: phantomjs server.js <port>');
   phantom.exit(1);
 } else {
   port = system.args[1];
   var listening = server.listen(port, function (request, response) {
+      
       console.log("GOT HTTP REQUEST");
       console.log(JSON.stringify(request, null, 4));
 
@@ -26,20 +27,9 @@ if (system.args.length !== 2) {
       response.write("<body><p>pretty cool :)</body></html>");
       response.close();
   });
+
   if (!listening) {
       console.log("could not create web server listening on port " + port);
       phantom.exit();
   }
-  // var url = "http://localhost:" + port + "/foo/bar.php?asdf=true";
-  // console.log("SENDING REQUEST TO:");
-  // console.log(url);
-  // page.open(url, function (status) {
-  //     if (status !== 'success') {
-  //         console.log('FAIL to load the address');
-  //     } else {
-  //         console.log("GOT REPLY FROM SERVER:");
-  //         console.log(page.content);
-  //     }
-  //     phantom.exit();
-  // });
 }
